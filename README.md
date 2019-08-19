@@ -13,6 +13,10 @@ A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedd
 
 The plugin implements [ntkme's 'github-buttons'](https://github.com/ntkme/github-buttons) and [Robert Krimen's gist-it](https://gist-it.appspot.com/) as shortcodes.
 
+## Installation
+- Copy the `wp-github-widgets` directory to your plugins folder `wp-content/plugins`
+- Activate the plugin via the plugins interface
+
 ## Usage
 
 ### GitHub Follow Button
