@@ -126,7 +126,7 @@ final class WP_Github_Widgets {
 	public function register_shortcodes() {
 		add_shortcode( 'Github_User_Button', 'wp_github_widgets_follow_button');
 		add_shortcode( 'Github_Repo_Button', 'wp_github_widgets_repo_button');
-		add_shortcode( 'GitHub_File', 'wp_github_widgets_display_file' );
+		add_shortcode( 'Github_File', 'wp_github_widgets_display_file' );
 	}
 }
 
