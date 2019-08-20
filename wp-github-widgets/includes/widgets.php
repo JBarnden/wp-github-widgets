@@ -17,10 +17,9 @@ function wp_github_widgets_buttons_script() {
     if ( wp_script_is( 'github-buttons-js', 'enqueued' ) ) {
         return;
     }
-
     wp_enqueue_script(
         'github-buttons-js', 		// $handle
-        __DIR__ . 'public/js/buttons.js',  // $src
+        plugins_url() . '/wp-github-widgets/public/js/buttons.js',  // $src
         array(), 					// $deps
         false,						// $ver
         true						// $in_footer
@@ -66,12 +65,12 @@ function wp_github_widgets_follow_button( $atts ) {
         ?>
             <a
                 class="github-button"
-                href="https://github.com/<?php $a['user']; ?>"
-                aria-label="Follow @<?php $a['user']; ?> on GitHub"
+                href="https://github.com/<?php echo $a['user'] ?>"
+                aria-label="Follow @<?php echo $a['user'] ?> on GitHub"
                 <?php if ( $size != '' ) { echo $size; } ?>
                 <?php if ( $count != '' ) { echo $count; } ?>
             >
-                Follow @<?php $a['user']; ?>
+                Follow @<?php echo $a['user']; ?>
             </a>
         <?php
     }
@@ -121,21 +120,28 @@ function wp_github_widgets_repo_button ( $atts ) {
     if ( $a['type'] == 'watch' ) {
         $href = 'href="https://github.com/' . $a['user'] . '/' . $a['repo'] . '/subscription"';
         $icon = 'data-icon="octicon-eye"';
+        $text = 'Watch';
     } else if ( $a['type'] == 'star' ) {
         $href = 'href="https://github.com/' . $a['user'] . '/' . $a['repo'] . '"';
         $icon = 'data-icon="octicon-star"';
+        $text = 'Star';
     } else if ( $a['type'] == 'fork' ) {
         $href = 'href="https://github.com/' . $a['user'] . '/' . $a['repo'] . '/fork"';
         $icon = 'data-icon="octicon-repo-forked"';
+        $text = "Fork";
     } else if ( $a['type'] == 'issue' ) {
         $href = 'href="https://github.com/' . $a['user'] . '/' . $a['repo'] . '/issues"';
         $icon = 'data-icon="octicon-issue-opened"';
+        $text = 'Issue';
     } else if ( $a['type'] == 'download' ) {
         $href = 'href="https://github.com/' . $a['user'] . '/' . $a['repo'] . '/archive/master.zip"';
         $icon = 'data-icon="octicon-cloud-download"';
+        $text = 'Download';
     } else {
         // Star by default
+        $href = 'href="https://github.com/' . $a['user'] . '/' . $a['repo'] . '"';
         $icon = 'data-icon="octicon-star"';
+        $text = 'Star';
     }
 
     // Override icon if standard
@@ -149,16 +155,16 @@ function wp_github_widgets_repo_button ( $atts ) {
     if ( $a['user'] != '' && $a['repo'] != '' ) {
         // Render button based on params
         ?>
-            <a
-                class="github-button"
-                <?php echo $href ?>
-                aria-label="Follow @<?php $a['user']; ?> on GitHub"
-                <?php echo $size ?>
-                <?php echo $count ?>
-                <?php if ( $icon != '' ) { echo $icon; } ?>
-            >
-                Follow @<?php $a['user']; ?>
-            </a>
+        <a
+            class="github-button"
+            <?php echo $href ?>
+            aria-label="<?php echo $text . " " . $a['user']; ?> on GitHub"
+            <?php echo $size ?>
+            <?php echo $count ?>
+            <?php if ( $icon != '' ) { echo $icon; } ?>
+        >
+            <?php echo $text; ?>
+        </a>
         <?php
     }
     else {
@@ -182,7 +188,7 @@ function wp_github_widgets_display_file ( $atts ) {
     // Render
     ob_start();
     if ( $a['url'] != '' ) {
-        ?><script src="http://gist-it.appspot.com/<?php $a['url'] ?>"></script><?php
+        ?><script src="http://gist-it.appspot.com/<?php echo $a['url'] ?>"></script><?php
     } else {
         ?><p style="font-weight: bold;">The 'url' parameter was not passed to the github widget shortcode.</p><?php
     }
