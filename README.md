@@ -41,11 +41,11 @@ Add the `[Github_Repo_Button user='JBarnden' repo='MyRepo']` shortcode in your c
 #### Example
 `[Github_Repo_Button user='JBarnden' repo='wp-github-widgets' size='large' show_count='true']`
 
-### Display GitHub hosted file or Gist
-Add the `[GitHub_File url='https://gist.github.com/JBarnden/somegist']` where the url parameter can be updated with a URL to any GitHub hosted file or Gist.
+### Display GitHub Gist
+Add the `[Gist]gist_id[/Gist]` where `gist_id` is replaced with the id of the desired Gist.
 
 #### Example
-`[GitHub_File url='https://gist.github.com/JBarnden/cee89b8a3600c50b7e50fa4870403069']`
+`[Gist]cee89b8a3600c50b7e50fa4870403069[/Gist]`
 
 ## Feature Requests and Contributions
 Please submit feature requests and contributions via the issues section of the Repository.  If you feel like improving the plugin, pull requests are both welcome and appreciated.

@@ -180,18 +180,11 @@ function wp_github_widgets_repo_button ( $atts ) {
  * 
  * @since 1.0.0
  */
-function wp_github_widgets_display_file ( $atts ) {
-    $a = shortcode_atts( array(
-        'url' => ''
-    ), $atts);
-
+function wp_github_widgets_display_file ( $atts, $content = null ) {
     // Render
-    ob_start();
-    if ( $a['url'] != '' ) {
-        ?><script src="http://gist-it.appspot.com/<?php echo $a['url'] ?>"></script><?php
+    if ( $content != null ) {
+        return '<script src="https://gist.github.com/' . $content . '.js"></script>';
     } else {
-        ?><p style="font-weight: bold;">The 'url' parameter was not passed to the github widget shortcode.</p><?php
+        return '<p style="font-weight: bold;">No content detected between shortcode tags, please see <a href="" target="_blank" rel="noopener noreferrer">documentation</a>.</p>';
     }
-
-    ob_get_clean();
 }
