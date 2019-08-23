@@ -1,10 +1,15 @@
 <?php
 /**
- * Plugin Name: WP GitHub Widgets
- * Description: Lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted gists/files and buttons for follow, watch, star, fork and more.
- * Version:     1.0.0
- * Author:      James Barnden
- * Author URI:  https://jamqes.com
+ * Plugin Name: 		WP GitHub Widgets
+ * Plugin URI:        	https://jamqes.com/uni/wp-github-widgets
+ * Description: 		Lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted gists/files and buttons for follow, watch, star, fork and more.
+ * Version:     		1.0.0
+ * Tested up to: 		5.2.2
+ * Author:      		James Barnden
+ * Author URI:  		https://jamqes.com
+ * Text Domain: 		wp-github-widgets
+ * License:           	GPL v2 or later
+ * License URI:       	https://www.gnu.org/licenses/gpl-2.0.html
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
