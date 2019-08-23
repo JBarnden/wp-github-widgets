@@ -1,6 +1,8 @@
 # GitHub Widgets for WordPress
 **Author: [James Barnden](https://github.com/JBarnden)**
 
+![GitHub Buttons](./docs_images/buttons.png "GitHub Buttons")
+
 ## Description
 A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted Gists/files and buttons for:
 
@@ -29,6 +31,9 @@ Add the `[Github_User_Button user='JBarnden']` shortcode in your content and rep
 #### Example
 `[Github_User_Button user='JBarnden' size='large' show_count='true']`
 
+#### Screenshot
+![GitHub Buttons](./docs_images/buttons.png "GitHub Buttons")
+
 ### GitHub Repo Buttons
 Add the `[Github_Repo_Button user='JBarnden' repo='MyRepo']` shortcode in your content, replacing `JBarnden` with the desired GitHub username and `MyRepo` with the desired repo belonging to the specified user.
 
@@ -46,6 +51,9 @@ Add the `[Gist]gist_id[/Gist]` where `gist_id` is replaced with the id of the de
 
 #### Example
 `[Gist]cee89b8a3600c50b7e50fa4870403069[/Gist]`
+
+#### Screenshot
+![Gist](./docs_images/gist.png "Gist")
 
 ## Feature Requests and Contributions
 Please submit feature requests and contributions via the issues section of the Repository.  If you feel like improving the plugin, pull requests are both welcome and appreciated.
