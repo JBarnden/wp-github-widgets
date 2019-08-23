@@ -1,5 +1,5 @@
 # GitHub Widgets for WordPress
-**Author: [James Barnden](https://github.com/JBarnden)**
+**Author: [James Barnden](https://jamqes.com)**
 
 ![GitHub Buttons](./docs_images/buttons.png "GitHub Buttons")
 
