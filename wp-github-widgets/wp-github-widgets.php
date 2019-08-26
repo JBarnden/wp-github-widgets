@@ -26,15 +26,6 @@ final class WP_Github_Widgets {
 	const VERSION = '1.0.0';
   
 	/**
-	 * Minimum PHP Version
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var string Minimum PHP version required to run the plugin.
-	 */
-  
-	const MINIMUM_PHP_VERSION = '7.2';
-	/**
 	 * Instance
 	 *
 	 * @since 1.0.0
@@ -80,7 +71,7 @@ final class WP_Github_Widgets {
 	 * @access public
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'my-plugin' );
+		load_plugin_textdomain( 'wp-github-widgets' );
 	}
   
 	/**
@@ -91,38 +82,11 @@ final class WP_Github_Widgets {
 	 * @access public
 	 */
 	public function init() {
-		// Check for required PHP version
-		if ( version_compare( PHP_VERSION, self::MINIMUM_PHP_VERSION, '<' ) ) {
-			add_action( 'admin_notices', [ $this, 'admin_notice_minimum_php_version' ] );
-			return;
-		}
-		
 		// Import widgets file
 		require_once(__DIR__ . '/includes/widgets.php' );
         
 		// Register shortcodes
 		$this->register_shortcodes();
-	}
-  
-	/**
-	 * Admin notice
-	 *
-	 * Warning when the site doesn't have a minimum required PHP version.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @access public
-	 */
-	public function admin_notice_minimum_php_version() {
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
-		$message = sprintf(
-			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'my-plugin' ),
-			'<strong>' . esc_html__( 'My Plugin', 'my-plugin' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'my-plugin' ) . '</strong>',
-			 self::MINIMUM_PHP_VERSION
-		);
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
 	}
 	
 	/**
