@@ -1,10 +1,10 @@
-# GitHub Widgets for WordPress
+# GitHub Widget Shortcodes
 **Author: [James Barnden](https://jamqes.com)**
 
 ![GitHub Buttons](./docs_images/buttons.png "GitHub Buttons")
 
 ## Description
-A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted Gists/files and buttons for:
+A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted Gists and buttons for:
 
 - Follow
 - Watch
@@ -16,8 +16,8 @@ A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedd
 The plugin implements [ntkme's 'github-buttons'](https://github.com/ntkme/github-buttons) and GitHub's gist display as shortcodes.
 
 ## Installation
-- Copy the `wp-github-widgets` directory to your plugins folder `wp-content/plugins`.
-- Activate the plugin via the plugins interface.
+- Upload the `wp-github-widgets` directory to your plugins directory `wp-content/plugins`.
+- Activate the plugin through the 'Plugins' menu in WordPress
 
 ## Usage
 
