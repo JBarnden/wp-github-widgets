@@ -21,11 +21,15 @@ A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedd
 
 The plugin implements [ntkme's 'github-buttons'](https://github.com/ntkme/github-buttons) and GitHub's gist display as shortcodes.
 
+
 == Installation ==
 
 1. Upload the `wp-github-widgets` directory to your plugins directory `wp-content/plugins`.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
+== Feature Requests and Contributions ==
+Please submit feature requests and contributions via the issues section of [the plugin's GitHub Repository](https://github.com/JBarnden/wp-github-widgets/).
+If you feel like improving the plugin, pull requests are both welcome and appreciated.
 
 == Changelog ==
 
