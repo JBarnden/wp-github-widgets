@@ -130,43 +130,43 @@ function wp_github_widgets_repo_button ( $atts ) {
     $user = esc_html($a['user']);
     $repo = esc_html($a['repo']);
 
-    // Set href and icon values
-    if ( $a['type'] == 'watch' ) {
-        $href = 'href="https://github.com/' . $user . '/' . $repo . '/subscription"';
-        $icon = 'data-icon="octicon-eye"';
-        $text = 'Watch';
-    } else if ( $a['type'] == 'star' ) {
-        $href = 'href="https://github.com/' . $user . '/' . $repo . '"';
-        $icon = 'data-icon="octicon-star"';
-        $text = 'Star';
-    } else if ( $a['type'] == 'fork' ) {
-        $href = 'href="https://github.com/' . $user . '/' . $repo . '/fork"';
-        $icon = 'data-icon="octicon-repo-forked"';
-        $text = "Fork";
-    } else if ( $a['type'] == 'issue' ) {
-        $href = 'href="https://github.com/' . $user . '/' . $repo . '/issues"';
-        $icon = 'data-icon="octicon-issue-opened"';
-        $text = 'Issue';
-    } else if ( $a['type'] == 'download' ) {
-        $href = 'href="https://github.com/' . $user . '/' . $repo . '/archive/master.zip"';
-        $icon = 'data-icon="octicon-cloud-download"';
-        $text = 'Download';
-    } else {
-        // Star by default
-        $href = 'href="https://github.com/' . $user . '/' . $repo . '"';
-        $icon = 'data-icon="octicon-star"';
-        $text = 'Star';
-    }
-
-    // Override icon if standard
-    if ( $a['icon'] == 'standard' ) {
-        $icon = '';
-    }
-
     // Render
     ob_start();
     // If required atts were set
     if ( $user != '' && $repo != '' ) {
+        // Set href and icon values
+        if ( $a['type'] == 'watch' ) {
+            $href = 'href="https://github.com/' . $user . '/' . $repo . '/subscription"';
+            $icon = 'data-icon="octicon-eye"';
+            $text = 'Watch';
+        } else if ( $a['type'] == 'star' ) {
+            $href = 'href="https://github.com/' . $user . '/' . $repo . '"';
+            $icon = 'data-icon="octicon-star"';
+            $text = 'Star';
+        } else if ( $a['type'] == 'fork' ) {
+            $href = 'href="https://github.com/' . $user . '/' . $repo . '/fork"';
+            $icon = 'data-icon="octicon-repo-forked"';
+            $text = "Fork";
+        } else if ( $a['type'] == 'issue' ) {
+            $href = 'href="https://github.com/' . $user . '/' . $repo . '/issues"';
+            $icon = 'data-icon="octicon-issue-opened"';
+            $text = 'Issue';
+        } else if ( $a['type'] == 'download' ) {
+            $href = 'href="https://github.com/' . $user . '/' . $repo . '/archive/master.zip"';
+            $icon = 'data-icon="octicon-cloud-download"';
+            $text = 'Download';
+        } else {
+            // Star by default
+            $href = 'href="https://github.com/' . $user . '/' . $repo . '"';
+            $icon = 'data-icon="octicon-star"';
+            $text = 'Star';
+        }
+
+        // Override icon if standard
+        if ( $a['icon'] == 'standard' ) {
+            $icon = '';
+        }
+
         // Render button based on params
         ?>
         <a
