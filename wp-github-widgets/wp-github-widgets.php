@@ -93,9 +93,9 @@ final class Widget_Shortcodes_GH {
 	 * Register plugin shortcodes.
 	 */
 	public function register_shortcodes() {
-		add_shortcode( 'Github_User_Button', 'wp_github_widgets_follow_button');
-		add_shortcode( 'Github_Repo_Button', 'wp_github_widgets_repo_button');
-		add_shortcode( 'Gist', 'wp_github_widgets_display_gist' );
+		add_shortcode( 'Github_User_Button', 'widget_shortcodes_gh_follow_button');
+		add_shortcode( 'Github_Repo_Button', 'widget_shortcodes_gh_repo_button');
+		add_shortcode( 'Gist', 'widget_shortcodes_gh_display_gist' );
 	}
 }
 

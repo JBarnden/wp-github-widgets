@@ -5,7 +5,7 @@
  * 
  * @since 1.0.0
  */
-function wp_github_widgets_buttons_script() {
+function widget_shortcodes_gh_buttons_script() {
     // Don't enqueue more than once.
     if ( wp_script_is( 'github-buttons-js', 'enqueued' ) ) {
         return;
@@ -24,7 +24,7 @@ function wp_github_widgets_buttons_script() {
  *
  * @since 1.0.0
  */
-function wp_github_widgets_follow_button( $atts ) {
+function widget_shortcodes_gh_follow_button( $atts ) {
     $a = shortcode_atts( array(
         'user' => '',
         'size' => 'small',
@@ -54,7 +54,7 @@ function wp_github_widgets_follow_button( $atts ) {
     }
 
     // Load script in footer
-    wp_github_widgets_buttons_script();
+    widget_shortcodes_gh_buttons_script();
 
     // Render
     ob_start();
@@ -92,7 +92,7 @@ function wp_github_widgets_follow_button( $atts ) {
  *
  * @since 1.0.0
  */
-function wp_github_widgets_repo_button ( $atts ) {
+function widget_shortcodes_gh_repo_button ( $atts ) {
     $a = shortcode_atts( array(
         'type' => 'default',
         'user' => '',
@@ -110,7 +110,7 @@ function wp_github_widgets_repo_button ( $atts ) {
     }
 
     // Load script in footer
-    wp_github_widgets_buttons_script();
+    widget_shortcodes_gh_buttons_script();
 
     // Set size
     if ( $a['size'] == 'large' ) {
@@ -194,7 +194,7 @@ function wp_github_widgets_repo_button ( $atts ) {
  * 
  * @since 1.0.0
  */
-function wp_github_widgets_display_file ( $atts, $content = null ) {
+function widget_shortcodes_gh_display_file ( $atts, $content = null ) {
     // Render
     if ( $content != null ) {
         return '<script src="https://gist.github.com/' . esc_html($content) . '.js"></script>';
