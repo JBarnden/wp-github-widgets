@@ -194,7 +194,7 @@ function widget_shortcodes_gh_repo_button ( $atts ) {
  * 
  * @since 1.0.0
  */
-function widget_shortcodes_gh_display_file ( $atts, $content = null ) {
+function widget_shortcodes_gh_display_gist ( $atts, $content = null ) {
     // Render
     if ( $content != null ) {
         return '<script src="https://gist.github.com/' . esc_html($content) . '.js"></script>';
