@@ -1,4 +1,4 @@
-=== GitHub Widget Shortcodes ===
+=== Widget Shortcodes for Github ===
 Contributors: jamqes
 Tags: GitHub, buttons, Gist, shortcodes
 Requires at least: 3.0.1
@@ -6,11 +6,11 @@ Tested up to: 5.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted Gists and buttons.
+Lightweight widget shortcodes to display GitHub buttons and gists on your blog.
 
 == Description ==
 
-A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted Gists and buttons for:
+Lightweight widget shortcodes to display GitHub buttons and gists on your blog. Includes shortcode for embedding GitHub hosted gists and buttons for:
 
 * Follow
 * Watch
@@ -24,7 +24,7 @@ The plugin implements [ntkme's 'github-buttons'](https://github.com/ntkme/github
 
 == Installation ==
 
-1. Upload the `wp-github-widgets` directory to your plugins directory `wp-content/plugins`.
+1. Upload the `widget-shortcodes-gh` directory to your plugins directory `wp-content/plugins`.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Feature Requests and Contributions ==
