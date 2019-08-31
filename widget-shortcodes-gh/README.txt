@@ -24,7 +24,7 @@ The plugin implements [ntkme's 'github-buttons'](https://github.com/ntkme/github
 
 == Installation ==
 
-1. Upload the `wp-github-widgets` directory to your plugins directory `wp-content/plugins`.
+1. Upload the `widget-shortcodes-gh` directory to your plugins directory `wp-content/plugins`.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Feature Requests and Contributions ==

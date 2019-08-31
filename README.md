@@ -16,7 +16,7 @@ Lightweight widget shortcodes to display GitHub buttons and gists on your blog. 
 The plugin implements [ntkme's 'github-buttons'](https://github.com/ntkme/github-buttons) and GitHub's gist display as shortcodes.
 
 ## Installation
-- Upload the `wp-github-widgets` directory to your plugins directory `wp-content/plugins`.
+- Upload the `widget-shortcodes-gh` directory to your plugins directory `wp-content/plugins`.
 - Activate the plugin through the 'Plugins' menu in WordPress
 
 ## Usage
