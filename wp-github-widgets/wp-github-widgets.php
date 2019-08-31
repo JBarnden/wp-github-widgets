@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: 		GitHub Widget Shortcodes
+ * Plugin Name: 		Widget Shortcodes for Github
  * Plugin URI:        	https://jamqes.com/uni/wp-github-widgets
- * Description: 		Lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted gists/files and buttons for follow, watch, star, fork and more.
+ * Description: 		Lightweight widget shortcodes to display GitHub buttons and gists on your blog. Includes shortcode for embedding GitHub hosted gists/files and buttons for follow, watch, star, fork and more.
  * Version:     		1.0.0
  * Tested up to: 		5.2.2
  * Author:      		James Barnden
  * Author URI:  		https://jamqes.com
- * Text Domain: 		wp-github-widgets
+ * Text Domain: 		widget-shortcodes-gh
  * License:           	GPL v2 or later
  * License URI:       	https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-final class WP_Github_Widgets {
+final class Widget_Shortcodes_GH {
 	/**
 	 * Plugin Version
 	 *
@@ -71,7 +71,7 @@ final class WP_Github_Widgets {
 	 * @access public
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'wp-github-widgets' );
+		load_plugin_textdomain( 'widget-shortcodes-gh' );
 	}
   
 	/**
@@ -93,10 +93,10 @@ final class WP_Github_Widgets {
 	 * Register plugin shortcodes.
 	 */
 	public function register_shortcodes() {
-		add_shortcode( 'Github_User_Button', 'wp_github_widgets_follow_button');
-		add_shortcode( 'Github_Repo_Button', 'wp_github_widgets_repo_button');
-		add_shortcode( 'Gist', 'wp_github_widgets_display_gist' );
+		add_shortcode( 'Github_User_Button', 'widget_shortcodes_gh_follow_button');
+		add_shortcode( 'Github_Repo_Button', 'widget_shortcodes_gh_repo_button');
+		add_shortcode( 'Gist', 'widget_shortcodes_gh_display_gist' );
 	}
 }
 
-WP_Github_Widgets::instance();
+Widget_Shortcodes_GH::instance();
