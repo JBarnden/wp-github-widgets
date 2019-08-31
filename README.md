@@ -1,10 +1,10 @@
-# GitHub Widget Shortcodes
+# Widget Shortcodes for Github
 **Author: [James Barnden](https://jamqes.com)**
 
 ![GitHub Buttons](./docs_images/buttons.png "GitHub Buttons")
 
 ## Description
-A lightweight GitHub widgets plugin for your blog. Includes shortcode for embedding GitHub hosted Gists and buttons for:
+Lightweight widget shortcodes to display GitHub buttons and gists on your blog. Includes shortcode for embedding GitHub hosted gists and buttons for:
 
 - Follow
 - Watch

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: 		Widget Shortcodes for Github
  * Plugin URI:        	https://jamqes.com/uni/wp-github-widgets
- * Description: 		Lightweight widget shortcodes to display GitHub buttons and gists on your blog. Includes shortcode for embedding GitHub hosted gists/files and buttons for follow, watch, star, fork and more.
+ * Description: 		Lightweight widget shortcodes to display GitHub buttons and gists on your blog. Includes shortcode for embedding GitHub hosted gists and buttons for follow, watch, star, fork and more.
  * Version:     		1.0.0
  * Tested up to: 		5.2.2
  * Author:      		James Barnden
